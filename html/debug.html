@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" enctype="multipart/form-data" action="/csadmin/admin_user.php">
+        <div class="col s12 input-field">
+            <input id="search" type="search" placeholder="email" name="user_name" required>
+            <input name="search_user" type="hidden" value="1">
+            <input name="already_login" type="hidden" value="1">
+            <button type="submit" name="search_button" style="background: none; border: none;"><i class="material-icons">search</i></button>
+            <!--<input type="submit" name="search_button">-->
+        </div>
+    </form>
+</body>
+</html>
