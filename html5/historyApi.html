@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        aside {
+            width: 220px;
+            height: 100%;
+            background-color: #ccc;
+            float: left;
+        }
+        
+        article {
+            /*float: left;*/
+            padding: 20px;
+            height: 100%;
+            background-color: #f5f5f5;
+            overflow: scroll;
+        }
+        
+        ul {
+            list-style: none;
+            font-size: 20px;
+            line-height: 2em;
+        }
+        
+        ul li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+        <ul id="list"></ul>
+    </aside>
+    <article>
+        <p id="content"></p>
+    </article>
+</body>
+<script src="resource/wuhuan.js"></script>
+<script>
+    (function () {
+        const ulElement = document.querySelector("#list");
+        const contentElement = document.querySelector("#content");
+
+        const firstTitle = "五环之歌";
+        for (let title of Object.keys(data)) {
+            let liElement = document.createElement("li");
+            liElement.innerHTML = `⭐️${title}`;
+            liElement.setAttribute("data-title", title);
+            ulElement.appendChild(liElement);
+
+            if(title == firstTitle)
+            {
+                contentElement.innerHTML = data[title];
+                if (window.history && history.pushState) {
+                    history.pushState(title, "any thing doesn't matter", `?t=${title}`);
+                }
+            }
+        }
+
+        const allLiElements = document.querySelectorAll("#list li");
+        for (let liElement of allLiElements) {
+            liElement.addEventListener("click", function (e) {
+                //data set is the data-* attribute 
+                let title = this.dataset["title"];
+                // console.log(title);
+
+                let content = data[title];
+                contentElement.innerHTML = content;
+
+                if (window.history && history.pushState) {
+                    history.pushState(title, "any thing doesn't matter", `?t=${title}`);
+                }
+            })
+        }
+
+        // window.onpopstate = function(e){
+        //     contentElement.innerHTML = data[e.state];
+        // }
+
+        window.addEventListener("popstate", function(e){
+            contentElement.innerHTML = data[e.state];
+        })
+
+
+    })()
+</script>
+
+</html>
