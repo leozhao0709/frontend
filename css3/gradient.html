@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 1000px;
+            margin: 30px auto;
+            border: 1px #000 solid;
+        }
+        div:nth-of-type(1){
+            background-image: -webkit-linear-gradient(left, yellow, green);
+            background-image: -o-linear-gradient(left, yellow, green);
+            background-image: linear-gradient(to right, yellow, green);
+        }
+
+        div:nth-of-type(2) {
+            background-image: -webkit-linear-gradient(yellow, green);
+            background-image: -o-linear-gradient(yellow, green);
+            background-image: linear-gradient(yellow, green);
+        }
+
+        div:nth-of-type(3) {
+            background-image: -webkit-linear-gradient(bottom left, yellow, green);
+            background-image: -o-linear-gradient(bottom left, yellow, green);
+            background-image: linear-gradient(to top right, yellow, green);
+            height: 200px;
+            width: 200px;
+        }
+
+        div:nth-of-type(4) {
+            background-image: -webkit-linear-gradient(325deg, yellow, green);
+            background-image: -o-linear-gradient(325deg, yellow, green);
+            background-image: linear-gradient(55deg, yellow, green);
+            height: 200px;
+            width: 200px;
+        }
+
+        div:nth-of-type(5) {
+            background-image: -webkit-linear-gradient(left, yellow 30%, blue 75%, red 100%);
+            background-image: -o-linear-gradient(left, yellow 30%, blue 75%, red 100%);
+            background-image: linear-gradient(to right, yellow 30%, blue 75%, red 100%);
+        }
+
+        div:nth-of-type(6) {
+            background-image: -webkit-linear-gradient(45deg, yellow 0%, yellow 25%, blue 25%, blue 50%, red 50%, red 75%, green 75%, green 100%);
+            background-image: -o-linear-gradient(45deg, yellow 0%, yellow 25%, blue 25%, blue 50%, red 50%, red 75%, green 75%, green 100%);
+            background-image: linear-gradient(45deg, yellow 0%, yellow 25%, blue 25%, blue 50%, red 50%, red 75%, green 75%, green 100%);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!--<div></div>-->
+</body>
+</html>

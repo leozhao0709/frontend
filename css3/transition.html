@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: red;
+            cursor: pointer;
+
+            /*transition: width 2s, background-color 1s;*/
+            /*transition: width, background-color, 2s;*/
+            /*transition: all 3s linear 0.5s;*/
+            transition: all 3s ease 0.5s;
+        }
+
+
+        div:hover{
+            width: 600px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
