@@ -1,0 +1,145 @@
+/**
+ * bootstrap 扩展
+ */
+.btn-lzhao { 
+  color: #ffffff; 
+  background-color: #E92322; 
+  border-color: #DB3B43; 
+} 
+ 
+.btn-lzhao:hover, 
+.btn-lzhao:focus, 
+.btn-lzhao:active, 
+.btn-lzhao.active, 
+.open .dropdown-toggle.btn-lzhao { 
+  color: #ffffff; 
+  background-color: #E92322; 
+  border-color: #DB3B43; 
+} 
+ 
+.btn-lzhao:active, 
+.btn-lzhao.active, 
+.open .dropdown-toggle.btn-lzhao { 
+  background-image: none; 
+} 
+ 
+.btn-lzhao.disabled, 
+.btn-lzhao[disabled], 
+fieldset[disabled] .btn-lzhao, 
+.btn-lzhao.disabled:hover, 
+.btn-lzhao[disabled]:hover, 
+fieldset[disabled] .btn-lzhao:hover, 
+.btn-lzhao.disabled:focus, 
+.btn-lzhao[disabled]:focus, 
+fieldset[disabled] .btn-lzhao:focus, 
+.btn-lzhao.disabled:active, 
+.btn-lzhao[disabled]:active, 
+fieldset[disabled] .btn-lzhao:active, 
+.btn-lzhao.disabled.active, 
+.btn-lzhao[disabled].active, 
+fieldset[disabled] .btn-lzhao.active { 
+  background-color: #E92322; 
+  border-color: #DB3B43; 
+} 
+ 
+.btn-lzhao .badge { 
+  color: #E92322; 
+  background-color: #ffffff; 
+}
+
+/**
+ * 全局样式
+ */
+body{
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+
+@font-face{
+    font-family: "lzhao-test";
+    src: url("../font/MiFie-Web-Font.eot") format('embedded-opentype'), 
+         url("../font/MiFie-Web-Font.svg") format('svg'), 
+         url("../font/MiFie-Web-Font.ttf") format('truetype'), 
+         url("../font/MiFie-Web-Font.woff") format('woff');  
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: "lzhao-test";
+    font-style: normal;
+}
+
+.icon-mobilephone::before {
+  content: "\e908";
+  font-size: 13px;
+}
+
+.icon-telephone::before {
+  content: "\e909";
+  font-size: 15px;
+}
+
+.icon-logo::before {
+  content: "\e93e";
+}
+
+.icon-icon::before {
+  content: "\e920";
+}
+
+/**
+ * 头部区域
+ */
+ #header{
+     height: 200px;
+ }
+
+ #header > .topbar{
+     height: 40px;
+     border-bottom: 1px solid #c0c0c0;
+     line-height: 40px;
+ }
+
+ #header > .topbar > .container > .row > div{
+     height: 40px;
+     font-size: 12px;
+     color: #888;
+     text-decoration: none;
+ }
+
+ #header > .topbar > .container > .row > div + div{
+    border-left: 1px solid #c0c0c0;
+ }
+
+ #header .mobile-link{
+     font-size: 12px;
+     color: #888;
+     text-decoration: none;
+ }
+
+ #header .frequent_question_and_log_in > a{
+     font-size: 12px;
+     color: #888;
+ }
+
+  #header .mobile-link > img{
+      display: none;
+      position: absolute;
+      left: 50%;
+      margin-left: -60px;
+      top: 30px;
+  }
+
+   #header .mobile-link:hover > img{
+       display: block;
+   }
+
+ /**
+  * 测试样式
+  */
+  section{
+      height: 200px;
+      background-color: #fff;
+  }
+
+  section:nth-of-type(2n+1) {
+      background-color: palevioletred;
+  }
