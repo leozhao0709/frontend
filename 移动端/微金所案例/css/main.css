@@ -1,5 +1,5 @@
 /**
- * bootstrap 扩展
+ * bootstrap æ‰©å±•
  */
 .btn-lzhao { 
   color: #ffffff; 
@@ -47,8 +47,114 @@ fieldset[disabled] .btn-lzhao.active {
   background-color: #ffffff; 
 }
 
+
+
+.navbar-lzhao {
+  background-color: #fff;
+  border-color: #f5f5f5;
+}
+.navbar-lzhao .navbar-brand {
+  color: #777;
+  height: 80px;
+}
+.navbar-lzhao .navbar-brand:hover,
+.navbar-lzhao .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-lzhao .navbar-text {
+  color: #777;
+}
+.navbar-lzhao .navbar-nav > li > a {
+  color: #777;
+  line-height: 48px;
+  font-size: 14px;
+}
+.navbar-lzhao .navbar-nav > li > a:hover,
+.navbar-lzhao .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+  border-bottom: 2px solid #e92322;
+}
+.navbar-lzhao .navbar-nav > .active > a,
+.navbar-lzhao .navbar-nav > .active > a:hover,
+.navbar-lzhao .navbar-nav > .active > a:focus {
+  color: #555;
+  /* background-color: #e7e7e7; */
+  border-bottom: 2px solid #e92322;
+}
+.navbar-lzhao .navbar-nav > .disabled > a,
+.navbar-lzhao .navbar-nav > .disabled > a:hover,
+.navbar-lzhao .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar-lzhao .navbar-toggle {
+  border-color: #ddd;
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+.navbar-lzhao .navbar-toggle:hover,
+.navbar-lzhao .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-lzhao .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-lzhao .navbar-collapse,
+.navbar-lzhao .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-lzhao .navbar-nav > .open > a,
+.navbar-lzhao .navbar-nav > .open > a:hover,
+.navbar-lzhao .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+  .navbar-lzhao .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-lzhao .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-lzhao .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-lzhao .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-lzhao .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-lzhao .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .navbar-lzhao .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-lzhao .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-lzhao .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.navbar-lzhao .navbar-link {
+  color: #777;
+}
+.navbar-lzhao .navbar-link:hover {
+  color: #333;
+}
+.navbar-lzhao .btn-link {
+  color: #777;
+}
+.navbar-lzhao .btn-link:hover,
+.navbar-lzhao .btn-link:focus {
+  color: #333;
+}
+.navbar-lzhao .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-lzhao .btn-link:hover,
+.navbar-lzhao .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-lzhao .btn-link:focus {
+  color: #ccc;
+}
+
 /**
- * 全局样式
+ * å…¨å±€æ ·å¼
  */
 body{
     font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
@@ -85,8 +191,9 @@ body{
   content: "\e920";
 }
 
+
 /**
- * 头部区域
+ * å¤´éƒ¨åŒºåŸŸ
  */
  #header{
      height: 200px;
@@ -130,10 +237,25 @@ body{
 
    #header .mobile-link:hover > img{
        display: block;
+       z-index: 1001;
+   }
+
+   #header .icon-logo {
+       font-size: 32px;
+       color: #333;
+       line-height: 50px;
+       vertical-align: middle;
+   }
+
+   #header .icon-icon {
+       font-size: 50px;
+       color: #E92322;
+       line-height: 50px;
+       vertical-align: middle;
    }
 
  /**
-  * 测试样式
+  * æµ‹è¯•æ ·å¼
   */
   section{
       height: 200px;
