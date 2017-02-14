@@ -1,0 +1,8 @@
+{
+    "name": "frontendtest",
+    "description": "description",
+    "authors": "lzhao",
+    "version": "1.0.0",
+    "main": " ",
+    "dependencies": {"jquery": "3.1.1"}
+}
