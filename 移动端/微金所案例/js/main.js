@@ -8,9 +8,18 @@ $(function () {
 
         $('#main_ad > .carousel-inner > .item').each(function (i, item) {
             let $item = $(item);
+            // console.log(item);
             let imgSrc = $item.data(isSmallScreen ? 'img-xs' : 'img-lg');
 
             $item.css('backgroundImage', `url('${imgSrc}')`);
+
+            if(isSmallScreen) {
+                $item.html(`<img src="${imgSrc}" alt="">`);
+            } 
+            else {
+                $item.empty();
+            }
+
         })
     }
 
