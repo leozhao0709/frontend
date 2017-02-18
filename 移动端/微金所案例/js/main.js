@@ -8,13 +8,30 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 
     let $newsTitle = $('.news-title');
-
     $("#news .nav-pills a").on("click", function(e){
         let $this = $(this);
-        
         let title = $this.data("title");
-
         $newsTitle.text(title);
+    })
+
+    let $carousels = $(".carousel");
+    let startX, endX;
+    let offset = 50;
+    $carousels.on("touchstart", function(e) {
+        startX = e.originalEvent.touches[0].clientX;
+        
+        console.log(startX);
+    });
+
+    $carousels.on("touchmove", function(e){
+        endX = e.originalEvent.touches[0].clientX;
+    })
+
+    $carousels.on("touchend", function(e){
+        let distance = Math.abs(startX - endX);
+        if(distance > offset) {
+            $(this).carousel(startX > endX?'next':'prev');
+        }
     })
 
 })
