@@ -1,8 +1,17 @@
 {
-    "name": "frontendtest",
-    "description": "description",
-    "authors": "lzhao",
-    "version": "1.0.0",
-    "main": " ",
-    "dependencies": {"jquery": "3.1.1"}
+  "name": "frontendtest",
+  "description": "description",
+  "authors": "lzhao",
+  "version": "1.0.0",
+  "main": " ",
+  "dependencies": {
+    "iconv-lite": "^0.4.15",
+    "jquery": "3.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.2",
+    "eslint-plugin-standard": "^2.0.1"
+  }
 }
