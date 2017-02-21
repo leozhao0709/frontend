@@ -19,7 +19,7 @@
             "taskName": "build typescript",
             // "isBuildCommand": true,
             "args": [
-                "tsc -p ."
+                "tsc --rootDir ./"
             ]
             // "isWatching": true,
             // "problemMatcher": "$tsc-watch"
