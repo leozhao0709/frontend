@@ -1,8 +1,8 @@
 require('http');
 
 setInterval(()=> {
-    console.log(1)
-}, 1000)
+    console.log(1);
+}, 1000);
 
 var exiting = false;
 
@@ -15,6 +15,6 @@ process.on("SIGINT", ()=>{
 
         exiting = true;
 
-        setTimeout(()=>{exiting = false}, 10000)
+        setTimeout(()=>{exiting = false;}, 10000);
     }
-})
+});

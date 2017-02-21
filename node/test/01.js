@@ -1,4 +1,4 @@
-require('http')
+require("http");
 // var argv = process.argv;
 
 // console.log(argv);
@@ -6,7 +6,7 @@ require('http')
 // var msg = "hello";
 // process.stdout.write(`${msg} world \n`)
 
-__dirname
+__dirname;
 
 // var size = process.stdout.getWindowSize();
 // console.log(size);
