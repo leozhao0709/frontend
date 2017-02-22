@@ -4,9 +4,7 @@ var fs = require("fs");
 var iconv = require("iconv-lite");
 var readline = require("readline");
 var os = require("os");
-// fs.readFile(path.join(__dirname, "./lyrics/万水千山总是情.lrc"), (err, data) => {
-//     // console.log(iconv.decode(data, "gbk"));
-// });
+var fileList_1 = require("./fileList");
 var LINESEPARATOR = os.EOL;
 var inputfilePath = path.join(__dirname, "./lyrics/万水千山总是情.lrc");
 var outputfilePath = path.join(__dirname, "./lyrics/test.lrc");
@@ -25,3 +23,4 @@ rl.on("close", function () {
         outputstream.write(line);
     }
 });
+fileList_1.listCurrentDirFiles(__dirname);
