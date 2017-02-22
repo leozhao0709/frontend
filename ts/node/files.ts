@@ -3,10 +3,8 @@ import * as fs from "fs";
 import * as iconv from "iconv-lite";
 import * as readline from "readline";
 import * as os from "os";
+import {listCurrentDirFiles} from "./fileList";
 
-// fs.readFile(path.join(__dirname, "./lyrics/万水千山总是情.lrc"), (err, data) => {
-//     // console.log(iconv.decode(data, "gbk"));
-// });
 const LINESEPARATOR = os.EOL;
 let inputfilePath = path.join(__dirname, "./lyrics/万水千山总是情.lrc");
 let outputfilePath = path.join(__dirname, "./lyrics/test.lrc");
@@ -30,3 +28,4 @@ rl.on("close", () => {
     }
 });
 
+listCurrentDirFiles(__dirname);

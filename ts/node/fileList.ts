@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as moment from "moment";
 
-let listCurrentDirFiles = (directory: string, deepth: number = 1) => {
+export let listCurrentDirFiles = (directory: string, deepth: number = 1) => {
     let currentDirectory = path.join(directory);
 
     // fs.readdir(currentDirectory, (error, files) => {
