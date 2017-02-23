@@ -1,13 +1,9 @@
-require("http");
-// var argv = process.argv;
+var abc = 321;
+exports.setABC = function(abcValue) {
+    abc = abcValue;
+};
+exports.getABC = function() {
+    return abc;
+};
 
-// console.log(argv);
-
-// var msg = "hello";
-// process.stdout.write(`${msg} world \n`)
-
-__dirname;
-
-// var size = process.stdout.getWindowSize();
-// console.log(size);
-
+exports.defaultABC = abc;
