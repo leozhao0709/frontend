@@ -1,0 +1,40 @@
+$border-radius: 5px;
+$bg-colors: (success: #dff0d8, info:#d9edf7, warning: #fcf8e3, danger: #f2dede);
+$border-colors: #d6e9c6,#bce8f1,#faebcc,#ebccd1;
+$screenSize: 800px;
+
+@import "_function";
+// @import "normalize";
+
+body {
+    background-color: if($screenSize > 768, pink, red);
+    font-size: double2(7px);
+}
+
+.alert {
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.alert-success {
+
+    background-color:map-get($bg-colors , success);
+    border: 1px solid nth($border-colors , 1);
+}
+
+.alert-info {
+    background-color: map-get($bg-colors, info);
+    border: 1px solid nth($border-colors , 2);
+}
+
+.alert-warning {
+    background-color: map-get($bg-colors, warning);
+    border: 1px solid nth($border-colors, 3);
+}
+
+.alert-danger {
+    background-color: map-get($bg-colors, danger);
+    border: 1px solid nth($border-colors, 4);
+}

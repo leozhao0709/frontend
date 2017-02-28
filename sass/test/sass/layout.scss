@@ -1,0 +1,21 @@
+@function layoutGrid($number: 5) {
+    $map:();
+    @for $i from 1 through $number {
+        $temp: (col#{$i}: percentage($i / $number));
+        $map: map-merge($map, $temp);
+    }
+    @return $map;
+}
+
+// @debug layoutGrid();
+
+@mixin layoutGrid($number: 5) {
+     $map: layoutGrid($number);
+     @each $key, $value in $map {
+         .#{$key}{
+             width: $value;
+         }
+     }
+}
+
+@include layoutGrid();
