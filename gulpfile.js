@@ -11,6 +11,18 @@ const imagemin = require("gulp-imagemin");
 const del = require("del");
 const gutil = require("gulp-util");
 
+gulp.task("autoprefixer", function () {
+    var postcss      = require("gulp-postcss");
+    var sourcemaps   = require("gulp-sourcemaps");
+    var autoprefixer = require("autoprefixer");
+
+    gulp.src("./src/*.css")
+        .pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer() ]))
+        .pipe(sourcemaps.write("."))
+        .pipe(gulp.dest("./dest"))
+        ;
+});
 
 const pipelog = notify.withReporter(() => {
     // console.log("Title:", options.title);
