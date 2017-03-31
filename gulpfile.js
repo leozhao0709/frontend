@@ -47,23 +47,24 @@ gulp.task("watch", () => {
 });
 
 gulp.task("sassTask", () => {
-    del.sync("./sass/test/stylesheets");
-    gutil.log(gutil.colors.green("delete sass build files"));
+    // return gulp.watch(["./sass/test/**/*.scss"], () => {
+        del.sync("./sass/test/stylesheets");
+        gutil.log(gutil.colors.green("delete sass build files"));
 
-    gulp.src(["./sass/test/sass/*.scss"])
-        .pipe(pipelog("compile sass: <%= file.relative %>"))
-        .pipe(sass({outputStyle: "expanded"}))
-        .on("error", sass.logError)
-        .pipe(gulp.dest("./sass/test/stylesheets"))
-        .pipe(minifyCss())
-        .pipe(rename({suffix: ".min"}))
-        .pipe(gulp.dest("./sass/test/stylesheets"))
-        // .pipe(debug({title: "compile sass"}))
-        // .pipe(notify("compile sass: <%= file.relative %>"))
-        .pipe(connect.reload())
-        .pipe(pipelog({message: "server reload", onLast: true}))
-        ;
-    
+        gulp.src(["./sass/test/sass/*.scss"])
+            .pipe(pipelog("compile sass: <%= file.relative %>"))
+            .pipe(sass({outputStyle: "expanded"}))
+            .on("error", sass.logError)
+            .pipe(gulp.dest("./sass/test/stylesheets"))
+            .pipe(minifyCss())
+            .pipe(rename({suffix: ".min"}))
+            .pipe(gulp.dest("./sass/test/stylesheets"))
+            // .pipe(debug({title: "compile sass"}))
+            // .pipe(notify("compile sass: <%= file.relative %>"))
+            .pipe(connect.reload())
+            .pipe(pipelog({message: "server reload", onLast: true}))
+            ;
+    // });
 });
 
 gulp.task("watch-sass", ()=>{
