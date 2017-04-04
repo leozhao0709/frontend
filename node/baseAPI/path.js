@@ -1,11 +1,11 @@
 const path = require("path");
 
-// const temp = path.join(__dirname, "./lyrics/血染的风采.lrc");
+const temp = path.join(__dirname, "./lyrics/血染的风采.lrc");
 
-const temp = "./target";
+// const temp = "./target";
 
-console.log(path.basename(temp));
-// console.log(path.basename(temp, "lrc"));
+// console.log(path.basename(temp));
+console.log(path.basename(temp, "js"));
 // console.log(path.delimiter);
 
 // console.log(process.env.PATH.split(path.delimiter));
