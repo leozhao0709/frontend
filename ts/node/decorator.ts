@@ -3,6 +3,7 @@ function fast(target, name, descriptor) {
     let run = descriptor.value;
     descriptor.value = function() {
         // run();
+        console.log(name);
         console.log(`speed ${this.speed}`);
     };
     return descriptor;
