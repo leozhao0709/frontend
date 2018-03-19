@@ -1,4 +1,4 @@
-let sleep = function (time) {
+let sleep = (time) => {
     return new Promise(function (resolve, reject) {
         setTimeout(function () {
             resolve();

@@ -11,7 +11,7 @@ rl.question("what's your name? ", (answer) => {
         throw new Error("没名字还来混");
     }
 
-    let server = net.connect({port: 2080}, () => {
+    let server = net.connect({ port: 2080 }, () => {
         console.log(`Welcome ${name} to 2080 chat room`);
 
         rl.setPrompt(name + "> ");
@@ -19,7 +19,7 @@ rl.question("what's your name? ", (answer) => {
         rl.prompt();
         rl.on("line", (line) => {
             // chunk: {"protocol": "boardcast", "from": "zhangsan", "message": "abc", "address": "127.0.0.1:65535"}
-            let send = {protocol: "boardcast", from: name, message: line, address: `${server.localAddress}:${server.localPort}`};
+            let send = { protocol: "boardcast", from: name, message: line, address: `${server.localAddress}:${server.localPort}` };
             server.write(JSON.stringify(send));
 
             rl.prompt();
